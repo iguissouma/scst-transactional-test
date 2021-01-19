@@ -21,6 +21,11 @@ spring:
         output:
           destination: my-output
           binder: local_rabbit
+        test-consumer:
+          destination: my-output
+          group: test
+          binder: local_rabbit
+
       binders:
         local_rabbit:
           type: rabbit
